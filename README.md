@@ -1,3 +1,26 @@
+#Task Definition
+Create a project using create-react-app and implement a list of congress members.
+
+You should read and implement the ProPublica Congress API:
+
+https://projects.propublica.org/api-docs/congress-api/members/#lists-of-members.
+
+#Functional Requirements:
+Add a header and footer
+Create a list with congress persons.
+Use SCSS to style the list.
+Add a input to search through all the fields name, party, gender, etc.
+Add a toggle button to display advanced filter to search by each field
+Add routing to implement a detail view
+
+#Optionals
+Client side pagination (size=7)
+Add responsive features
+Deploy the application using github pages/heroku
+Add a back button on the detail view.
+Add a range filter by date.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
