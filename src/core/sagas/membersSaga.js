@@ -6,7 +6,6 @@ import { FETCH_CONGRESS_REQUEST, FETCH_CONGRESS_SUCCESS, FETCH_CONGRESS_FAILURE 
 import congressApi from '../services/congressApi'
 
 function* fetchMembers(action){
-    console.log('saga/fetchMembers');
     try{
         const response = yield call(congressApi.listOfMembers, action.payload);
         if(response.status === 200){

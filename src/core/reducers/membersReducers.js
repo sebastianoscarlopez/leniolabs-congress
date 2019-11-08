@@ -9,7 +9,6 @@ const INTIAL_STATE = Immutable({
 });
 
 export default function membersReducers(state = INTIAL_STATE, action){
-    console.log(action);
     switch(action.type){
         case FETCH_CONGRESS_REQUEST:
             return state.merge({

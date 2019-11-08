@@ -10,16 +10,23 @@ import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import React from 'react';
 export const MembersFilter = (props) => {
     const [isAdvanced, setIsAdvanced] = React.useState(true);
+    const [basicSearch, setBasicSearch] = React.useState('');
     const [party, setParty] = React.useState('');
     const [congress, setCongress] = React.useState(116);
     const [chamber, setChamber] = React.useState('house');
     const [inOffice, setInOffice] = React.useState(false);
     const [name, setName] = React.useState('');
 
+    const minSenate = 80, minHouse = 102, maxCongress = 116; // mini
+
     // if house chamber was selected, min value is 102 
     React.useEffect(() =>{
-        if(congress < 102 && chamber === 'house'){
-            setCongress(102);
+        if (congress < minHouse && chamber === 'house'){
+            setCongress(minHouse);
+        } else if(congress < minSenate){
+            setCongress(minSenate);
+        }else if (congress > maxCongress) {
+            setCongress(maxCongress);
         }
     }, [chamber, congress]);
     
@@ -28,10 +35,10 @@ export const MembersFilter = (props) => {
         if(onFilterChange !== undefined)
         {
             onFilterChange({
-                party, congress, chamber, inOffice, name
+                congress, chamber, isAdvanced, basicSearch, party, inOffice, name
             });
         }
-    }, [onFilterChange, party, congress, chamber, inOffice, name]);
+    }, [onFilterChange, congress, chamber, isAdvanced, basicSearch, party, inOffice, name]);
 
     return(
         <Container>
@@ -46,7 +53,7 @@ export const MembersFilter = (props) => {
             <Form.Group as={Row}  controlId="formPlaintextPassword">
                 <Form.Label column md={1}>Congress:</Form.Label>
                 <Col md={2}>
-                    <Form.Control type='number' min={chamber === 'house' ? 102 : 80} max={116} value={congress} onChange={e => setCongress(e.target.value) }/>
+                    <Form.Control type='number' min={chamber === 'house' ? minHouse : minSenate} max={maxCongress} value={congress} onChange={e => setCongress(e.target.value) }/>
                 </Col>
                 <Form.Label column md={1}>Search:</Form.Label>
                 <Col md={2}>
@@ -60,7 +67,7 @@ export const MembersFilter = (props) => {
                     <>
                         <Form.Label column md={1}>Search:</Form.Label>
                         <Col md={2}>
-                            <Form.Control />
+                            <Form.Control value={basicSearch} onChange={e => setBasicSearch(e.target.value)} />
                         </Col>
                     </>
                 }

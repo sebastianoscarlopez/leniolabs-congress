@@ -11,7 +11,6 @@ const CONGRESS_URL = 'https://api.propublica.org/congress/v1/';
  */
 const listOfMembers = (payload) => {
     const url = `${CONGRESS_URL}/${payload.congress}/${payload.chamber}/members.json`;
-    console.log(url);
     return axios.request({
         method: 'get',
         url,
