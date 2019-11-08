@@ -8,7 +8,7 @@ const INTIAL_STATE = Immutable({
     errorMessage: ''
 });
 
-export default function membersReducers(state = INTIAL_STATE, action){
+export default function membersContainerReducers(state = INTIAL_STATE, action){
     switch(action.type){
         case FETCH_CONGRESS_REQUEST:
             return state.merge({

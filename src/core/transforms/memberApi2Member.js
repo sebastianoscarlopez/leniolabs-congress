@@ -27,8 +27,8 @@ export default memberApi => {
  */
 const getGenderText = codGender => {
     return codGender === 'F'
-        ? 'Femenino'
-        : 'Masculino'
+        ? 'Female'
+        : 'Male'
 }
 
 /**

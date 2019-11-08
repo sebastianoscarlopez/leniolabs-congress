@@ -44,7 +44,7 @@ const MembersContainer = (props) => {
           }
           {
             !props.errorMessage &&
-            <Col md={8} xs={12}><Members data={props.members} filters={filtersDebounced} isFetching={props.isFetching} /></Col>
+            <Col xs={12}><Members data={props.members} filters={filtersDebounced} isFetching={props.isFetching} /></Col>
           }
         </Row>
       </Container>
@@ -57,7 +57,7 @@ function mapStateToProps(state) {
     {
       errorMessage: null
     })
-    .merge((state && state.membersReducers) || {});
+    .merge((state && state.membersContainerReducers) || {});
   return newState;
 }
 

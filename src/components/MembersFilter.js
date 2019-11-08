@@ -55,7 +55,7 @@ export const MembersFilter = (props) => {
                 <Col md={2}>
                     <Form.Control type='number' min={chamber === 'house' ? minHouse : minSenate} max={maxCongress} value={congress} onChange={e => setCongress(e.target.value) }/>
                 </Col>
-                <Form.Label column md={1}>Search:</Form.Label>
+                <Form.Label column md={1}>Chamber:</Form.Label>
                 <Col md={2}>
                     <Form.Control as="select" value={chamber} onChange={ e => setChamber(e.target.value) }>
                         <option value='senate' >Senate</option>

@@ -6,7 +6,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import loading from '../assets/loading.gif';
 
 import memberApi2Member from '../core/transforms/memberApi2Member';
-import { Member}  from './Member';
+import Member from './Member';
 
 export const Members = (props) => {
     const [membersData, setMembersData] = React.useState([]);
@@ -18,16 +18,20 @@ export const Members = (props) => {
                 .map(memberApi2Member)
             : [];
        
-        //props.data has only members of Chamber and congress selected, its are filter remotely
+        // Local filters
+        // props.data has only members of Chamber and congress selected, its are filter remotely
         if (props.filters.isAdvanced !== undefined) {
             // Basic or advanced search
             if (!props.filters.isAdvanced && props.filters.basicSearch.length > 0) {
-                Object.keys(k => {
-                });
+                auxMembers = auxMembers
+                    .filter(m =>
+                        Object.keys(m)
+                            .some(k => m[k] !== null && !(m[k] instanceof Date) && m[k].toString().toLocaleLowerCase().includes(props.filters.basicSearch))
+                    );
             } else
             {
                 auxMembers = auxMembers
-                    .filter(m => // Local filters
+                    .filter(m =>
                         (props.filters.name.length === 0 || m.FullName.toLocaleLowerCase().includes(props.filters.name.toLocaleLowerCase()))
                         && m.Party.startsWith(props.filters.party)
                         && (!props.filters.inOffice || m.inOffice)
