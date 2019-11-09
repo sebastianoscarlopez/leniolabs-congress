@@ -11,9 +11,9 @@ export default memberApi => {
         Party: getPartyName(memberApi.party),
         Gender: getGenderText(memberApi.gender),
         Birth: new Date(memberApi.date_of_birth),
-        Facebook: memberApi.facebook_account,
         Twitter: memberApi.twitter_account,
         Youtube: memberApi.youtube_account,
+        Facebook: memberApi.facebook_account,
         Web: memberApi.url,
         api_uri: memberApi.api_uri,
         inOffice: memberApi.in_office

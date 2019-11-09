@@ -18,14 +18,14 @@ export default (props) => {
     const handleSelect = _ => {
         setSelected(props.data);
     };
-    if (props.data.Twitter && props.data.Twitter.length > 0) {
-        //fetchImageProfile(props.data.id, props.data.Twitter);
-    }
+    
     return (
         <ListGroup.Item onClick={handleSelect} active={selected.id === props.data.id}>
             <Row>
                 <Col md={2} xs={12}>
-                    <Image roundedCircle height={100} src={`https://twitter.com/${props.data.Twitter}/profile_image?size=original`} />
+                    {
+                        <Image roundedCircle height={100} src={`https://twitter.com/${props.data.Twitter}/profile_image?size=original`} />
+                    }
                 </Col>
                 <Col xs={10} >
                     <Row>

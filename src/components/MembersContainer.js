@@ -18,6 +18,10 @@ import { fetchMembers } from '../core/actions/membersContainerActions'
 import { MembersFilter } from './MembersFilter'
 import { Members } from './Members'
 
+/**
+ * Container with members list, filters
+ * @param {*} props 
+ */
 const MembersContainer = (props) => {
   const [filters, setFilters] = React.useState({});
   const [filtersDebounced, setFiltersDebounced] = React.useState({});
@@ -39,7 +43,7 @@ const MembersContainer = (props) => {
         <Row>
           <Col md={12} xs={12}><MembersFilter onFilterChange={setFilters} /></Col>
           {
-            props.errorMessage &&
+            props.errorMessage && props.errorMessage.length > 0 &&
             <Col md={6} xs={12}><p>{props.errorMessage}</p></Col>
           }
           {
