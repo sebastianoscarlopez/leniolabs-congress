@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -16,14 +16,14 @@ function App() {
 //  i18nInit();
   return (
     <Provider store={StoreApp()}>
-      <BrowserRouter>
+      <HashRouter basename='/'>
         <Switch>
-        <Route exact path="/" component={MembersContainer} />
-        <Route path="/details/:idMember">
-          <DetailContainer />
+          <Route exact path="/" component={MembersContainer} />
+          <Route path="/details/:idMember">
+            <DetailContainer />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   );
 }
