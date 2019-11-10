@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/leniolabs-congress/precache-manifest.ee88dbedc8d046ebf3893eb1d7a221c4.js"
+  "/leniolabs-congress/precache-manifest.96338085feff87061ec09ad46d078afa.js"
 );
 
 self.addEventListener('message', (event) => {
