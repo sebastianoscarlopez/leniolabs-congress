@@ -7,28 +7,28 @@ import Pagination from 'react-bootstrap/Pagination';
  *  totalPages, 
  *  currentPage,
  *  onChange,
- *  maxPages
+ *  maxPagesShowed
  * } props
  */
 export default (props) => {
     const [currentPage, setCurrentPage] = React.useState(props.currentPage);
     const [fromToPage, setFromToPage] = React.useState({
         from: props.currentPage,
-        to: props.maxPages < props.totalPages
-            ? props.maxPages
+        to: props.maxPagesShowed < props.totalPages
+            ? props.maxPagesShowed
             : props.totalPages
     });
 
     // Range of pages preferente in the center
     const refreshRange = () => {
-        let from = currentPage - (props.maxPages / 2);
-        from = from + props.maxPages - 1 > props.totalPages
-            ? props.totalPages - props.maxPages + 1
+        let from = currentPage - (props.maxPagesShowed / 2);
+        from = from + props.maxPagesShowed - 1 > props.totalPages
+            ? props.totalPages - props.maxPagesShowed + 1
             : from;
         from = from >= 1
             ? from
             : 1;
-        let to = from + props.maxPages - 1;
+        let to = from + props.maxPagesShowed - 1;
         to = to < props.totalPages
             ? to
             : props.totalPages;
@@ -50,7 +50,7 @@ export default (props) => {
                 [...Array(fromToPage.to - fromToPage.from + 1).keys()]
                     .map(idx => {
                         const page = idx + fromToPage.from;
-                        return (<Pagination.Item onClick={_ => setCurrentPage(page)} active={page === currentPage}>{page}</Pagination.Item>)
+                        return (<Pagination.Item key={idx} onClick={_ => setCurrentPage(page)} active={page === currentPage}>{page}</Pagination.Item>)
                     })
             }
             {

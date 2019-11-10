@@ -5,16 +5,14 @@
  */
 export default memberApi => {
     return {
-        id: memberApi.id,
-        FullName: `${memberApi.first_name} ${memberApi.middle_name || ''} ${memberApi.last_name}`
+        ...memberApi,
+        full_name: `${memberApi.first_name} ${memberApi.middle_name || ''} ${memberApi.last_name}`
             .replace(/\s{2}/g, ' '),
-        Party: getPartyName(memberApi.party),
-        Gender: getGenderText(memberApi.gender),
-        Birth: new Date(memberApi.date_of_birth),
-        Twitter: memberApi.twitter_account,
-        Youtube: memberApi.youtube_account,
-        Facebook: memberApi.facebook_account,
+        party: getPartyName(memberApi.party),
+        gender: getGenderText(memberApi.gender),
+        birth: new Date(memberApi.date_of_birth).toLocaleDateString('es-AR', { day: '2-digit', month: '2-digit', year: 'numeric' }),
         Web: memberApi.url,
+
         api_uri: memberApi.api_uri,
         inOffice: memberApi.in_office
     }

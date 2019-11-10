@@ -1,6 +1,3 @@
-/**
- * Component with filters and members list
- */
 import React from 'react';
 
 import Container from 'react-bootstrap/Container';
@@ -15,6 +12,8 @@ import MembersContext from './MembersContext';
 
 import { fetchMembers } from '../core/actions/membersContainerActions'
 
+import Header from './Header';
+import Footer from './Footer';
 import { MembersFilter } from './MembersFilter'
 import { Members } from './Members'
 
@@ -39,6 +38,7 @@ const MembersContainer = (props) => {
 
   return (
     <MembersContext.Provider value={[memberSelected, setMemberSelected]}>
+      <Header />
       <Container>
         <Row>
           <Col md={12} xs={12}><MembersFilter onFilterChange={setFilters} /></Col>
@@ -52,6 +52,7 @@ const MembersContainer = (props) => {
           }
         </Row>
       </Container>
+      <Footer />
     </MembersContext.Provider>
   );
 }

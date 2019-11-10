@@ -3,11 +3,10 @@ import React from 'react';
 
 import ListGroup from 'react-bootstrap/ListGroup';
 
-import loading from '../assets/loading.gif';
-
 import memberApi2Member from '../core/transforms/memberApi2Member';
 import Member from './Member';
 import Pager from './Pager';
+import Loading from './Loading';
 
 /**
  * The list of members, its apply local filters
@@ -16,7 +15,6 @@ import Pager from './Pager';
 export const Members = (props) => {
     const [membersData, setMembersData] = React.useState([]);
     const [currentPage, setCurrentPage] = React.useState(1);
-    const [totalPages, setTotalPages] = React.useState(1);
     const showedByPage = 7;
 
     React.useEffect(() => {
@@ -38,9 +36,9 @@ export const Members = (props) => {
             } else {
                 auxMembers = auxMembers
                     .filter(m =>
-                        (props.filters.name.length === 0 || m.FullName.toLocaleLowerCase().includes(props.filters.name.toLocaleLowerCase()))
-                        && m.Party.startsWith(props.filters.party)
-                        && (!props.filters.inOffice || m.inOffice)
+                        (props.filters.name.length === 0 || m.full_name.toLocaleLowerCase().includes(props.filters.name.toLocaleLowerCase()))
+                        && m.party.startsWith(props.filters.party)
+                        && (!props.filters.inOffice || m.in_office)
                     )
             }
         }
@@ -51,7 +49,7 @@ export const Members = (props) => {
         <>
             {
                 props.isFetching &&
-                <img src={loading} />
+                <Loading />
             }
             {
                 !props.isFetching && membersData.length > 0 &&
@@ -59,7 +57,7 @@ export const Members = (props) => {
                     totalPages={Math.ceil(membersData.length / showedByPage)}
                     currentPage={currentPage}
                     onChange={setCurrentPage}
-                    maxPages={10}
+                    maxPagesShowed={10}
                 />
             }
             {
