@@ -13,7 +13,7 @@ import RowHeader from '../shared/RowHeader';
 import PersonPicture from '../shared/PersonPicture';
 import Loading from '../Loading/';
 
-import styles from './styles.scss';
+import './styles.scss';
 
 /**
  * Show detailed information about a member

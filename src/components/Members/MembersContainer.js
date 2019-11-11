@@ -36,7 +36,7 @@ const MembersContainer = (props) => {
 
   return (
     <MembersContext.Provider value={[memberSelected, setMemberSelected]}>
-      <Container>
+      <Container className='members-container'>
         <MembersFilter onFilterChange={setFilters} />
         <Row>
           {

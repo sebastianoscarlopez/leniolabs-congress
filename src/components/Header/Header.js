@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -10,7 +9,7 @@ import Image from 'react-bootstrap/Image';
 import leniolabsLogo from '../../assets/leniolabs-isologo.svg';
 import congress from '../../assets/capitol.jpg';
 
-import styles from './styles.scss';
+import './styles.scss';
 
 /**
  * className={container}

@@ -1,7 +1,7 @@
 import React from 'react';
 import Pagination from 'react-bootstrap/Pagination';
 
-import styles from './styles.scss';
+import './styles.scss';
 
 /**
  * Simple, but nice pager

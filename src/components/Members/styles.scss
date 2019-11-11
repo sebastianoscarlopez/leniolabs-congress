@@ -1,7 +1,17 @@
 @use '../shared/base';
 
+.members-container{
+  min-height: 2000px;
+}
+
 .name {
     background-color: white;
     font-size: 150%;
     color: base.$primary-dark;
+}
+
+.datePicker{
+    position: absolute;
+    overflow-y: absolute;
+    z-index: 1;
 }

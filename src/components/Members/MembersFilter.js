@@ -1,4 +1,4 @@
-import Container from 'react-bootstrap/Container';
+import React from 'react';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,7 +8,12 @@ import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 
 import RowHeader from '../shared/RowHeader';
 
-import React from 'react';
+import 'moment/locale/es';
+import 'rc-datepicker/lib/style.css';
+import { DatePickerInput } from 'rc-datepicker';
+
+import './styles.scss';
+
 export default (props) => {
     const [isAdvanced, setIsAdvanced] = React.useState(true);
     const [basicSearch, setBasicSearch] = React.useState('');
@@ -17,9 +22,11 @@ export default (props) => {
     const [chamber, setChamber] = React.useState('senate');
     const [inOffice, setInOffice] = React.useState(false);
     const [name, setName] = React.useState('');
+    const [birthFrom, setBirthFrom] = React.useState();
+    const [birthTo, setBirthTo] = React.useState();
 
     const minSenate = 80, minHouse = 102, maxCongress = 116; // mini
-
+    
     // if house chamber was selected, min value is 102 
     React.useEffect(() => {
         if (congress < minHouse && chamber === 'house') {
@@ -35,10 +42,10 @@ export default (props) => {
     React.useEffect(() => {
         if (onFilterChange !== undefined) {
             onFilterChange({
-                congress, chamber, isAdvanced, basicSearch, party, inOffice, name
+                congress, chamber, isAdvanced, basicSearch, party, inOffice, name, birthFrom, birthTo
             });
         }
-    }, [onFilterChange, congress, chamber, isAdvanced, basicSearch, party, inOffice, name]);
+    }, [onFilterChange, congress, chamber, isAdvanced, basicSearch, party, inOffice, name, birthFrom, birthTo]);
 
     return (
         <>
@@ -89,6 +96,30 @@ export default (props) => {
                         </Col>
                         <Col md={3}>
                             <Form.Check type='checkbox' checked={inOffice} label='In Office' onChange={e => setInOffice(e.target.checked)} />
+                        </Col>
+                        <Form.Label column md={1}>Birth:</Form.Label>
+                        <Col md={2} >
+                            <DatePickerInput
+                                valueLink={{
+                                    value: birthFrom,
+                                    requestChange: setBirthFrom
+                                }}
+                                showOnInputClick
+                                placeholder='placeholder'
+                                locale='es'
+                            />
+                        </Col>
+                        <Form.Label column md={1}>To:</Form.Label>
+                        <Col md={2} >
+                            <DatePickerInput
+                                valueLink={{
+                                    value: birthTo,
+                                    requestChange: setBirthTo
+                                }}
+                                showOnInputClick
+                                placeholder='placeholder'
+                                locale='es'
+                            />
                         </Col>
                     </>
                 }

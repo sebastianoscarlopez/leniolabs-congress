@@ -43,6 +43,8 @@ export default (props) => {
                         (props.filters.name.length === 0 || m.full_name.toLocaleLowerCase().includes(props.filters.name.toLocaleLowerCase()))
                         && m.party.startsWith(props.filters.party)
                         && (!props.filters.inOffice || m.in_office)
+                        && (!(props.filters.birthFrom instanceof Date) || new Date(m.date_of_birth) >= props.filters.birthFrom)
+                        && (!(props.filters.birthTo instanceof Date) || new Date(m.date_of_birth) <= props.filters.birthTo)
                     )
             }
         }

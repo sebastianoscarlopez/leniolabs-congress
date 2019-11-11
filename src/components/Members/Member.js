@@ -9,7 +9,7 @@ import MembersContext from './MembersContext';
 import * as Render from '../shared/MemberItemRenders';
 import PersonPicture from '../shared/PersonPicture';
 
-import styles from './styles.scss';
+import './styles.scss';
 
 /**
  * Card with member information
