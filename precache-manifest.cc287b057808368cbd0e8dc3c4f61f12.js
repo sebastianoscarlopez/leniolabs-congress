@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3c9cd5f8a533af4763677a19a6cb860a",
+    "revision": "38d69c9fdeae8b3d706688cc78fb5d49",
     "url": "/leniolabs-congress/index.html"
   },
   {
-    "revision": "43140be50f02990bcc07",
+    "revision": "8c959d28dc0884f9e8b5",
     "url": "/leniolabs-congress/static/css/2.8e947a49.chunk.css"
   },
   {
-    "revision": "d19f9fa2d03f8a52738c",
+    "revision": "4226e7fa071da448e8f1",
     "url": "/leniolabs-congress/static/css/main.c067c73f.chunk.css"
   },
   {
-    "revision": "43140be50f02990bcc07",
-    "url": "/leniolabs-congress/static/js/2.e71c9638.chunk.js"
+    "revision": "8c959d28dc0884f9e8b5",
+    "url": "/leniolabs-congress/static/js/2.515a06c6.chunk.js"
   },
   {
-    "revision": "d19f9fa2d03f8a52738c",
-    "url": "/leniolabs-congress/static/js/main.4f8a05ff.chunk.js"
+    "revision": "4226e7fa071da448e8f1",
+    "url": "/leniolabs-congress/static/js/main.8bedb598.chunk.js"
   },
   {
     "revision": "bf70b4975526e9d1c7bc",
