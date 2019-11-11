@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/leniolabs-congress/static/css/main.9889bbc8.chunk.css",
+    "main.css": "/leniolabs-congress/static/css/main.8aa345f4.chunk.css",
     "main.js": "/leniolabs-congress/static/js/main.c76a586d.chunk.js",
     "main.js.map": "/leniolabs-congress/static/js/main.c76a586d.chunk.js.map",
     "runtime-main.js": "/leniolabs-congress/static/js/runtime-main.77ac91a3.js",
@@ -9,10 +9,10 @@
     "static/js/2.cac9cc11.chunk.js": "/leniolabs-congress/static/js/2.cac9cc11.chunk.js",
     "static/js/2.cac9cc11.chunk.js.map": "/leniolabs-congress/static/js/2.cac9cc11.chunk.js.map",
     "index.html": "/leniolabs-congress/index.html",
-    "precache-manifest.85dc36c081fe9baa3992f25dacd78c52.js": "/leniolabs-congress/precache-manifest.85dc36c081fe9baa3992f25dacd78c52.js",
+    "precache-manifest.5ad7779061f1c1f5e7e669f984476fff.js": "/leniolabs-congress/precache-manifest.5ad7779061f1c1f5e7e669f984476fff.js",
     "service-worker.js": "/leniolabs-congress/service-worker.js",
     "static/css/2.b0bb7f2c.chunk.css.map": "/leniolabs-congress/static/css/2.b0bb7f2c.chunk.css.map",
-    "static/css/main.9889bbc8.chunk.css.map": "/leniolabs-congress/static/css/main.9889bbc8.chunk.css.map",
+    "static/css/main.8aa345f4.chunk.css.map": "/leniolabs-congress/static/css/main.8aa345f4.chunk.css.map",
     "static/media/leniolabs-isologo.svg": "/leniolabs-congress/static/media/leniolabs-isologo.1d6348f9.svg",
     "static/media/loading_segment.svg": "/leniolabs-congress/static/media/loading_segment.2659ad40.svg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.77ac91a3.js",
     "static/css/2.b0bb7f2c.chunk.css",
     "static/js/2.cac9cc11.chunk.js",
-    "static/css/main.9889bbc8.chunk.css",
+    "static/css/main.8aa345f4.chunk.css",
     "static/js/main.c76a586d.chunk.js"
   ]
 }

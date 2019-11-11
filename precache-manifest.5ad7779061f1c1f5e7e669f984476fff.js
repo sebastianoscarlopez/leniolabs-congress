@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9dbbf2fad736aeadd95e3f77a82a6a76",
+    "revision": "2996ca81521967719c70a856a6714033",
     "url": "/leniolabs-congress/index.html"
   },
   {
@@ -8,15 +8,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/leniolabs-congress/static/css/2.b0bb7f2c.chunk.css"
   },
   {
-    "revision": "fd3986c8713f23d5a766",
-    "url": "/leniolabs-congress/static/css/main.9889bbc8.chunk.css"
+    "revision": "93bd98e7b5ad30f4b2e8",
+    "url": "/leniolabs-congress/static/css/main.8aa345f4.chunk.css"
   },
   {
     "revision": "d74f305c26822ff371e7",
     "url": "/leniolabs-congress/static/js/2.cac9cc11.chunk.js"
   },
   {
-    "revision": "fd3986c8713f23d5a766",
+    "revision": "93bd98e7b5ad30f4b2e8",
     "url": "/leniolabs-congress/static/js/main.c76a586d.chunk.js"
   },
   {
