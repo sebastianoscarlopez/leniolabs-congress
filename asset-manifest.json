@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/leniolabs-congress/static/css/main.b100e6da.chunk.css",
-    "main.js": "/leniolabs-congress/static/js/main.eef5415f.chunk.js",
-    "main.js.map": "/leniolabs-congress/static/js/main.eef5415f.chunk.js.map",
+    "main.css": "/leniolabs-congress/static/css/main.9889bbc8.chunk.css",
+    "main.js": "/leniolabs-congress/static/js/main.c76a586d.chunk.js",
+    "main.js.map": "/leniolabs-congress/static/js/main.c76a586d.chunk.js.map",
     "runtime-main.js": "/leniolabs-congress/static/js/runtime-main.77ac91a3.js",
     "runtime-main.js.map": "/leniolabs-congress/static/js/runtime-main.77ac91a3.js.map",
     "static/css/2.b0bb7f2c.chunk.css": "/leniolabs-congress/static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.86971e3c.chunk.js": "/leniolabs-congress/static/js/2.86971e3c.chunk.js",
-    "static/js/2.86971e3c.chunk.js.map": "/leniolabs-congress/static/js/2.86971e3c.chunk.js.map",
+    "static/js/2.cac9cc11.chunk.js": "/leniolabs-congress/static/js/2.cac9cc11.chunk.js",
+    "static/js/2.cac9cc11.chunk.js.map": "/leniolabs-congress/static/js/2.cac9cc11.chunk.js.map",
     "index.html": "/leniolabs-congress/index.html",
-    "precache-manifest.96338085feff87061ec09ad46d078afa.js": "/leniolabs-congress/precache-manifest.96338085feff87061ec09ad46d078afa.js",
+    "precache-manifest.85dc36c081fe9baa3992f25dacd78c52.js": "/leniolabs-congress/precache-manifest.85dc36c081fe9baa3992f25dacd78c52.js",
     "service-worker.js": "/leniolabs-congress/service-worker.js",
     "static/css/2.b0bb7f2c.chunk.css.map": "/leniolabs-congress/static/css/2.b0bb7f2c.chunk.css.map",
-    "static/css/main.b100e6da.chunk.css.map": "/leniolabs-congress/static/css/main.b100e6da.chunk.css.map",
-    "static/media/leniolabs-illustration-2.svg": "/leniolabs-congress/static/media/leniolabs-illustration-2.15dc3606.svg",
-    "static/media/leniolabs-isologo.svg": "/leniolabs-congress/static/media/leniolabs-isologo.1d6348f9.svg"
+    "static/css/main.9889bbc8.chunk.css.map": "/leniolabs-congress/static/css/main.9889bbc8.chunk.css.map",
+    "static/media/leniolabs-isologo.svg": "/leniolabs-congress/static/media/leniolabs-isologo.1d6348f9.svg",
+    "static/media/loading_segment.svg": "/leniolabs-congress/static/media/loading_segment.2659ad40.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.77ac91a3.js",
     "static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.86971e3c.chunk.js",
-    "static/css/main.b100e6da.chunk.css",
-    "static/js/main.eef5415f.chunk.js"
+    "static/js/2.cac9cc11.chunk.js",
+    "static/css/main.9889bbc8.chunk.css",
+    "static/js/main.c76a586d.chunk.js"
   ]
 }
