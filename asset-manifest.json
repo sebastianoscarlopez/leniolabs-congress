@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/leniolabs-congress/static/css/main.6f3156c4.chunk.css",
-    "main.js": "/leniolabs-congress/static/js/main.d563236e.chunk.js",
-    "main.js.map": "/leniolabs-congress/static/js/main.d563236e.chunk.js.map",
+    "main.css": "/leniolabs-congress/static/css/main.c067c73f.chunk.css",
+    "main.js": "/leniolabs-congress/static/js/main.4f8a05ff.chunk.js",
+    "main.js.map": "/leniolabs-congress/static/js/main.4f8a05ff.chunk.js.map",
     "runtime-main.js": "/leniolabs-congress/static/js/runtime-main.77ac91a3.js",
     "runtime-main.js.map": "/leniolabs-congress/static/js/runtime-main.77ac91a3.js.map",
-    "static/css/2.b0bb7f2c.chunk.css": "/leniolabs-congress/static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.cac9cc11.chunk.js": "/leniolabs-congress/static/js/2.cac9cc11.chunk.js",
-    "static/js/2.cac9cc11.chunk.js.map": "/leniolabs-congress/static/js/2.cac9cc11.chunk.js.map",
+    "static/css/2.8e947a49.chunk.css": "/leniolabs-congress/static/css/2.8e947a49.chunk.css",
+    "static/js/2.e71c9638.chunk.js": "/leniolabs-congress/static/js/2.e71c9638.chunk.js",
+    "static/js/2.e71c9638.chunk.js.map": "/leniolabs-congress/static/js/2.e71c9638.chunk.js.map",
     "index.html": "/leniolabs-congress/index.html",
-    "precache-manifest.d3ef29ddf76fe96e374ddf9412a335bc.js": "/leniolabs-congress/precache-manifest.d3ef29ddf76fe96e374ddf9412a335bc.js",
+    "precache-manifest.f73f60e4e2f1d81d2c0e06cd16b2fb5a.js": "/leniolabs-congress/precache-manifest.f73f60e4e2f1d81d2c0e06cd16b2fb5a.js",
     "service-worker.js": "/leniolabs-congress/service-worker.js",
-    "static/css/2.b0bb7f2c.chunk.css.map": "/leniolabs-congress/static/css/2.b0bb7f2c.chunk.css.map",
-    "static/css/main.6f3156c4.chunk.css.map": "/leniolabs-congress/static/css/main.6f3156c4.chunk.css.map",
+    "static/css/2.8e947a49.chunk.css.map": "/leniolabs-congress/static/css/2.8e947a49.chunk.css.map",
+    "static/css/main.c067c73f.chunk.css.map": "/leniolabs-congress/static/css/main.c067c73f.chunk.css.map",
     "static/media/capitol.jpg": "/leniolabs-congress/static/media/capitol.916616b3.jpg",
     "static/media/leniolabs-isologo.svg": "/leniolabs-congress/static/media/leniolabs-isologo.91359c09.svg",
     "static/media/loading_segment.svg": "/leniolabs-congress/static/media/loading_segment.2659ad40.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.77ac91a3.js",
-    "static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.cac9cc11.chunk.js",
-    "static/css/main.6f3156c4.chunk.css",
-    "static/js/main.d563236e.chunk.js"
+    "static/css/2.8e947a49.chunk.css",
+    "static/js/2.e71c9638.chunk.js",
+    "static/css/main.c067c73f.chunk.css",
+    "static/js/main.4f8a05ff.chunk.js"
   ]
 }

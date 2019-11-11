@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5047a9e32c035a6e4ee179275e36ccdf",
+    "revision": "3c9cd5f8a533af4763677a19a6cb860a",
     "url": "/leniolabs-congress/index.html"
   },
   {
-    "revision": "d74f305c26822ff371e7",
-    "url": "/leniolabs-congress/static/css/2.b0bb7f2c.chunk.css"
+    "revision": "43140be50f02990bcc07",
+    "url": "/leniolabs-congress/static/css/2.8e947a49.chunk.css"
   },
   {
-    "revision": "22477eb3f8f9fdf2017c",
-    "url": "/leniolabs-congress/static/css/main.6f3156c4.chunk.css"
+    "revision": "d19f9fa2d03f8a52738c",
+    "url": "/leniolabs-congress/static/css/main.c067c73f.chunk.css"
   },
   {
-    "revision": "d74f305c26822ff371e7",
-    "url": "/leniolabs-congress/static/js/2.cac9cc11.chunk.js"
+    "revision": "43140be50f02990bcc07",
+    "url": "/leniolabs-congress/static/js/2.e71c9638.chunk.js"
   },
   {
-    "revision": "22477eb3f8f9fdf2017c",
-    "url": "/leniolabs-congress/static/js/main.d563236e.chunk.js"
+    "revision": "d19f9fa2d03f8a52738c",
+    "url": "/leniolabs-congress/static/js/main.4f8a05ff.chunk.js"
   },
   {
     "revision": "bf70b4975526e9d1c7bc",
