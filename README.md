@@ -1,4 +1,4 @@
-# [Demo on Github Pages](https://sebastianoscarlopez.github.io/leniolabs-congress/)
+# [Leniolabs-Congress Challenge on Github Pages](https://sebastianoscarlopez.github.io/leniolabs-congress/)
 
 # Task Definition
 Create a project using create-react-app and implement a list of congress members.

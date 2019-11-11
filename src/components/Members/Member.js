@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom'
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 import MembersContext from './MembersContext';
-import * as Render from './MemberItemRenders';
+import * as Render from '../shared/MemberItemRenders';
+import PersonPicture from '../shared/PersonPicture';
 
+import styles from './styles.scss';
 
 /**
  * Card with member information
@@ -34,13 +35,13 @@ export default (props) => {
                 <Col md={2} xs={12}>
                     {
                         <Link to={`/details/${props.data.id}`}>
-                            <Image roundedCircle height={100} src={`https://twitter.com/${props.data.twitter_account}/profile_image?size=original`} />
+                            <PersonPicture gender={props.data.gender} twitter_account={props.data.twitter_account} />
                         </Link>
                     }
                 </Col>
-                <Col xs={10} >
-                    <Row>
-                        <Col xs={12} style={{ backgroundColor: 'white' }} >
+                <Col xs={10}>
+                    <Row className='name' >
+                        <Col xs={12} >
                             <Link to={`/details/${props.data.id}`}>{props.data.full_name}</Link>
                         </Col>
                     </Row>

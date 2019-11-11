@@ -1,0 +1,7 @@
+@use '../shared/base';
+
+.name {
+    background-color: white;
+    font-size: 150%;
+    color: base.$primary-dark;
+}

@@ -1,0 +1,14 @@
+@use '../shared/base';
+
+.loading-container{
+    min-height: 2000px;
+    img{
+        position: fixed;
+        left: 50%;
+        @include base.transform(translateY(100%) translateX(-50%));
+        display: block;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,18 @@
+@use './components/shared/base';
+
+.container{
+    background-color: #d1fcff;
+    border-left: base.$background-dark 2px solid;
+    border-right: base.$background-dark 2px solid;
+}
+body {
+  margin: 0;
+  font-family: base.$font !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

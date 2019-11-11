@@ -4,32 +4,25 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import ListGroup from 'react-bootstrap/ListGroup';
 
-import leniolabsIlustration from '../assets/leniolabs-illustration-2.svg';
-import leniolabsLogo from '../assets/leniolabs-isologo.svg';
-import congress from '../assets/congress.jpeg';
+import styles from './styles.scss';
+import leniolabsLogo from '../../assets/leniolabs-isologo.svg';
 
-/**
- * Header that admit childrens
- */
-const Header = (props) => {
+const Footer = (props) => {
     return (
         <>
             {
-                !props.isFetching &&
-                <Container>
+                <Container className='footer-container' >
                     <Row>
                         <Col xs={12}>
-                            <Image src={congress} height={200} />
                             <Image src={leniolabsLogo} height={50} />
+                            This is a Leniolabs challenge. Source code can be found here <a href='https://github.com/sebastianoscarlopez/leniolabs-congress'>https://github.com/sebastianoscarlopez/leniolabs-congress</a>
                         </Col>
                     </Row>
-                    {props.children}
                 </Container>
             }
         </>
     )
 }
 
-export default Header;
+export default Footer;

@@ -1,0 +1,20 @@
+@use '../shared/base';
+
+.details-container {
+  min-height: 2000px;
+
+  .details-row{
+    background-color: white;
+    border: base.$stroke 1px solid;
+  }
+
+  .name{
+    font-size: 200%;
+    color: base.$primary-dark;
+  }
+
+  div{
+    border: none;
+    padding-top: 2px;
+  }
+}

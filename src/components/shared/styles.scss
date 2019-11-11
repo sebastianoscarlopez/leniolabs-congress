@@ -1,0 +1,41 @@
+@use '../shared/base';
+
+.member-property-title {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.member-property-value {
+  font-size: 120%;
+  color: base.$stroke;
+}
+
+.row-header {
+  position: relative;
+  height: base.$row-header-height;
+  background-color: base.$background-dark;
+  color: base.$primary;
+  width: 100%;
+
+  button {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 50px;
+    height: base.$row-header-height - 10px;
+    color:white !important;
+    border: base.$primary 0px solid;
+    background-color: base.$primary-dark;
+  }
+
+  .btn-group {
+    left: 5px;
+    top: 5px;
+    height: base.$row-header-height - 10px;
+    
+    label{
+      padding-top: 2px;
+      background-color: base.$primary-dark !important;
+    }
+  }
+}

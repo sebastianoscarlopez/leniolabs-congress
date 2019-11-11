@@ -1,0 +1,41 @@
+// Colors https://leniolabs-branding.now.sh/content/colors.html
+$font: 'Source Sans Pro';
+
+$stroke: #33363c;
+
+$primary: #46CDCF;
+$primary-dark: #007bff;
+$primary-light: #ABEDD8;
+$remark: #FFFA96;
+
+$background: #193849;
+$background-dark: #052733;
+$background-light: #d1fcff;
+$background-remark: #eebe5b;
+
+$row-header-height: 40px;
+
+@mixin propertyCalcPlus($property, $a, $b){    
+    #{$property}: -webkit-calc(#{$a} + #{$a});
+    #{$property}: -moz-calc(#{$a} + #{$b});
+    #{$property}: calc(#{$a} + #{$b});
+}
+
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin alignCenter() {
+    top: 50%;
+    left: 50%;
+    @include transform(translateY(-50%) translateX(-50%));
+}
+
+.center{
+  position: relative;
+  @include alignCenter();
+}

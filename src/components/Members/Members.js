@@ -3,18 +3,22 @@ import React from 'react';
 
 import ListGroup from 'react-bootstrap/ListGroup';
 
-import memberApi2Member from '../core/transforms/memberApi2Member';
+import memberApi2Member from '../../core/transforms/memberApi2Member';
 import Member from './Member';
-import Pager from './Pager';
-import Loading from './Loading';
+import Pager from '../Pager';
+import Loading from '../Loading';
+import RowHeader from '../shared/RowHeader';
+
+import Row from 'react-bootstrap/Row';
 
 /**
  * The list of members, its apply local filters
  * @param {*} props 
  */
-export const Members = (props) => {
+export default (props) => {
     const [membersData, setMembersData] = React.useState([]);
     const [currentPage, setCurrentPage] = React.useState(1);
+    const [totalPages, setTotalPages] = React.useState(0);
     const showedByPage = 7;
 
     React.useEffect(() => {
@@ -43,23 +47,32 @@ export const Members = (props) => {
             }
         }
         setMembersData(auxMembers);
+        setTotalPages(Math.ceil(auxMembers.length / showedByPage));
+        setCurrentPage(1);
+    }, [props.isFetching, props.filters, props.data]);
 
-    }, [props.isFetching, props.filters]);
     return (
         <>
             {
                 props.isFetching &&
-                <Loading />
+                <Row>
+                    <RowHeader />
+                    <Loading />
+                </Row>
             }
-            {
-                !props.isFetching && membersData.length > 0 &&
-                <Pager
-                    totalPages={Math.ceil(membersData.length / showedByPage)}
-                    currentPage={currentPage}
-                    onChange={setCurrentPage}
-                    maxPagesShowed={10}
-                />
-            }
+            <Row>
+                <RowHeader>
+                    {
+                        !props.isFetching && membersData.length > 0 &&
+                        <Pager
+                            totalPages={totalPages}
+                            currentPage={currentPage}
+                            onChange={setCurrentPage}
+                            maxPagesShowed={10}
+                        />
+                    }
+                </RowHeader>
+            </Row>
             {
                 <ListGroup>
                     {

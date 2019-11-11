@@ -1,6 +1,8 @@
 import React from 'react';
 import Pagination from 'react-bootstrap/Pagination';
 
+import styles from './styles.scss';
+
 /**
  * Simple, but nice pager
  * @param {
@@ -19,8 +21,10 @@ export default (props) => {
             : props.totalPages
     });
 
-    // Range of pages preferente in the center
-    const refreshRange = () => {
+    React.useEffect(() => {
+        props.onChange && props.onChange(currentPage);
+
+        // Range of pages with preference in the current in the center
         let from = currentPage - (props.maxPagesShowed / 2);
         from = from + props.maxPagesShowed - 1 > props.totalPages
             ? props.totalPages - props.maxPagesShowed + 1
@@ -32,14 +36,12 @@ export default (props) => {
         to = to < props.totalPages
             ? to
             : props.totalPages;
-        setFromToPage({ from, to });
-    }
-    React.useEffect(() => {
-        props.onChange && props.onChange(currentPage);
-        refreshRange();
-    }, [currentPage, props.onChange]);
+        if (from !== fromToPage.from || to !== fromToPage.to) {
+            setFromToPage({ from, to });
+        }
+    }, [currentPage, props, fromToPage]);
     return (
-        <Pagination>
+        <Pagination className='positionPager'>
             <Pagination.First disabled={currentPage === 1} onClick={_ => setCurrentPage(1)} />
             <Pagination.Prev disabled={currentPage === 1} onClick={_ => setCurrentPage(currentPage - 1)} />
             {

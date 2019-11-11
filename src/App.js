@@ -7,23 +7,28 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import StoreApp from './core/store';
 //import i18nInit from './core/i18n';
 
-import MembersContainer from './components/MembersContainer';
-import DetailContainer from './components/DetailContainer';
+import MembersContainer from './components/Members';
+import DetailsContainer from './components/Details/';
 
-import './App.css';
+import Header from './components/Header/';
+import Footer from './components/Footer/';
+
+import './App.scss';
 
 function App() {
 //  i18nInit();
   return (
     <Provider store={StoreApp()}>
+      <Header />
       <HashRouter basename='/'>
         <Switch>
           <Route exact path="/" component={MembersContainer} />
           <Route path="/details/:idMember">
-            <DetailContainer />
+            <DetailsContainer />
           </Route>
         </Switch>
       </HashRouter>
+      <Footer />
     </Provider>
   );
 }

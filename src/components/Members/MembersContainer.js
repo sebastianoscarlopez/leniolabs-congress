@@ -10,12 +10,10 @@ import { connect } from 'react-redux';
 
 import MembersContext from './MembersContext';
 
-import { fetchMembers } from '../core/actions/membersContainerActions'
+import { fetchMembers } from '../../core/actions/membersContainerActions';
 
-import Header from './Header';
-import Footer from './Footer';
-import { MembersFilter } from './MembersFilter'
-import { Members } from './Members'
+import MembersFilter from './MembersFilter';
+import Members from './Members';
 
 /**
  * Container with members list, filters
@@ -28,20 +26,19 @@ const MembersContainer = (props) => {
   const fetchMembers = props.fetchMembers;
   React.useEffect(() => {
     fetchMembers(filters);
-  }, [filters]);
+  }, [filters, fetchMembers]);
 
   React.useEffect(() => {
     if (!props.isFetching) {
       setFiltersDebounced(filters);
     }
-  }, [props.isFetching]);
+  }, [props.isFetching, filters]);
 
   return (
     <MembersContext.Provider value={[memberSelected, setMemberSelected]}>
-      <Header />
       <Container>
+        <MembersFilter onFilterChange={setFilters} />
         <Row>
-          <Col md={12} xs={12}><MembersFilter onFilterChange={setFilters} /></Col>
           {
             props.errorMessage && props.errorMessage.length > 0 &&
             <Col md={6} xs={12}><p>{props.errorMessage}</p></Col>
@@ -52,7 +49,6 @@ const MembersContainer = (props) => {
           }
         </Row>
       </Container>
-      <Footer />
     </MembersContext.Provider>
   );
 }
